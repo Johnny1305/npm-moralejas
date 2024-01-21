@@ -1,0 +1,11 @@
+{
+  "name": "moralejas",
+  "version": "1.0.0",
+  "description": "Envia una moraleja aleatoria",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Johnny13",
+  "license": "ISC"
+}
