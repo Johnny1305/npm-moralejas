@@ -1,11 +1,17 @@
 {
   "name": "moralejas",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Envia una moraleja aleatoria",
   "main": "index.js",
   "scripts": {
     "test": "npm test"
   },
+  "keywords": [
+    "moralejas",
+    "npm",
+    "nodejs",
+    "chiste"
+  ],
   "author": "Johnny13",
   "license": "MIT"
 }
