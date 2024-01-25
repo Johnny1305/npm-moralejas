@@ -1,8 +1,7 @@
 <div align="center">
-<img src="https://johnnyportfolio.vercel.app/static/projects/npm-morals.png" height="150px" width="auto" /> 
-<h3>
- NPM Moralejas
-</h3>
+<h1>
+ < NPM Moralejas >
+</h1>
 <p>Este paquete npm proporciona una colección de moralejas graciosas y aleatorias que puedes utilizar para añadir un toque de humor a tu aplicación o proyecto.</p>
 </div>
 
