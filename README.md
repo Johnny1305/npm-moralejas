@@ -40,18 +40,20 @@ const opcionesEstilos = {
 
 console.log(moraleja.HTML(opcionesEstilos)); // Llama al método HTML con estilos personalizados
 ```
-
-> Estilos por Defecto:
-> fontFamily: "'Arial', sans-serif",
-> border: '2px solid #3498db',
-> padding: '20px',
-> borderRadius: '8px',
-> backgroundColor: '#ecf0f1',
-> margin: '20px',
-> maxWidth: '600px',
-> boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-> fontSize: '18px',
-> color: '#2c3e50',
+```js
+const EstilosPorDefecto = {
+            fontFamily: "'Arial', sans-serif",
+            border: '2px solid #3498db',
+            padding: '20px',
+            borderRadius: '8px',
+            backgroundColor: '#ecf0f1',
+            margin: '20px',
+            maxWidth: '600px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            fontSize: '18px',
+            color: '#2c3e50',
+        };
+```
 
 ## Contribución
 ¡Si tienes moralejas graciosas para agregar, no dudes en contribuir! Simplemente sigue estos pasos:
