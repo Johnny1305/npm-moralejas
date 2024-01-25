@@ -1,6 +1,23 @@
-# Moralejas Aleatorias
+<div align="center">
+<img src="public/favicon.svg" height="50px" width="auto" /> 
+<h3>
+ NPM Moralejas
+</h3>
+<p>Este paquete npm proporciona una colección de moralejas graciosas y aleatorias que puedes utilizar para añadir un toque de humor a tu aplicación o proyecto.</p>
+</div>
 
-Este paquete npm proporciona una colección de moralejas graciosas y aleatorias que puedes utilizar para añadir un toque de humor a tu aplicación o proyecto.
+<p></p>
+
+<div align="center">
+
+![NPM Badge](https://img.shields.io/badge/Moralejas-white?style=flat&logo=npm&label=NPM&color=white&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fmoralejas)
+![GitHub stars](https://img.shields.io/github/stars/Johnny1305/npm-moralejas)
+![GitHub issues](https://img.shields.io/github/issues/Johnny1305/npm-moralejas)
+![GitHub forks](https://img.shields.io/github/forks/Johnny1305/npm-moralejas)
+![GitHub PRs](https://img.shields.io/github/issues-pr/Johnny1305/npm-moralejas)
+
+</div>
+
 
 ## Instalación
 
@@ -65,5 +82,8 @@ const EstilosPorDefecto = {
 5. Envía tus cambios al repositorio: `git push origin nueva-moraleja`.
 6. Abre un Pull Request.
 
+<a href="https://github.com/Johnny1305/npm-moralejas/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Johnny1305/npm-moralejas" />
+</a>
 
 ¡Espero que disfrutes de las moralejas y que agregues algunas propias! Si encuentras algún problema o tienes sugerencias, no dudes en abrir un problema o un pull request. ¡Diviértete programando!
