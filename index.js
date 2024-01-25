@@ -1,5 +1,5 @@
 // index.js
-const moralejas = require('./moralejas.json').moralejas;
+const moralejas = require('./src/moralejas.json').moralejas;
 
 const moraleja = {
     TXT: function () {
@@ -44,9 +44,5 @@ const moraleja = {
             </div>`;
     }
 };
-
-// Ejemplos de uso:
-console.log(moraleja.TXT()); // Llama al método TXT
-console.log(moraleja.HTML());  // Llama al método HTML
 
 module.exports = moraleja;
