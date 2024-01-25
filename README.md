@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://johnnyportfolio.vercel.app/static/projects/npm-morals.png" height="50px" width="auto" /> 
+<img src="https://johnnyportfolio.vercel.app/static/projects/npm-morals.png" height="150px" width="auto" /> 
 <h3>
  NPM Moralejas
 </h3>
