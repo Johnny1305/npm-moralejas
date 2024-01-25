@@ -30,19 +30,12 @@ npm install moralejas
 ```js
 const moraleja = require('moralejas');
 
-// Obtener una moraleja aleatoria en formato TEXTO
-
-console.log(moraleja.TXT());
+console.log(moraleja.TXT()); // Obtener una moraleja aleatoria en formato TEXTO
+console.log(moraleja.HTML()); // Obtener una moraleja aleatoria en formato HTML
 
 ```
 ```js
 const moraleja = require('moralejas');
-
-// Obtener una moraleja aleatoria en formato HTML
-
-console.log(moraleja.HTML());
-
-
 // Personalizar estilo HTML
 
 // Ejemplo de uso con estilos personalizados
