@@ -60,7 +60,7 @@ const EstilosPorDefecto = {
 
 1. Realiza un fork del repositorio.
 2. Crea una rama para tus cambios: `git checkout -b nueva-moraleja`.
-3. Agrega tus moralejas en el archivo `index.js`.
+3. Agrega tus moralejas en el archivo `src/moralejas.json`.
 4. Guarda tus cambios y haz un commit: `git commit -m "Añadir nuevas moralejas"`.
 5. Envía tus cambios al repositorio: `git push origin nueva-moraleja`.
 6. Abre un Pull Request.
