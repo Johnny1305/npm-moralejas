@@ -9,11 +9,13 @@
 
 <div align="center">
 
-![NPM Badge](https://img.shields.io/badge/Moralejas-white?style=flat&logo=npm&label=NPM&color=white&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fmoralejas)
-![GitHub stars](https://img.shields.io/github/stars/Johnny1305/npm-moralejas)
-![GitHub issues](https://img.shields.io/github/issues/Johnny1305/npm-moralejas)
-![GitHub forks](https://img.shields.io/github/forks/Johnny1305/npm-moralejas)
-![GitHub PRs](https://img.shields.io/github/issues-pr/Johnny1305/npm-moralejas)
+<p align="center">
+   <img src="https://img.shields.io/npm/dt/moralejas?style=for-the-badge">
+   <img src="https://img.shields.io/github/stars/Johnny1305/npm-moralejas?style=for-the-badge">
+   <img src="https://img.shields.io/github/issues/Johnny1305/npm-moralejas?style=for-the-badge">
+   <img src="https://img.shields.io/npm/v/moralejas?style=for-the-badge">
+   <img src="https://img.shields.io/github/license/Johnny1305/npm-moralejas?style=for-the-badge">
+</p>
 
 </div>
 
