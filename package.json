@@ -1,6 +1,6 @@
 {
   "name": "moralejas",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Envia una moraleja aleatoria",
   "main": "index.js",
   "scripts": {
