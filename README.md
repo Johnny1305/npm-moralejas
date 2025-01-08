@@ -66,6 +66,153 @@ const EstilosPorDefecto = {
         };
 ```
 
+## Soporte Multilenguaje
+El paquete también permite traducir las moralejas a diferentes idiomas usando la función `TranslateTXT` o `TranslateHTML`.
+
+### Ejemplo de traducción a texto
+```js
+(async () => {
+    const moralejaTraducida = await moraleja.TranslateTXT('en'); // Traduce al inglés
+    console.log(moralejaTraducida);
+})();
+```
+
+### Ejemplo de traducción en HTML
+```js
+(async () => {
+    const opcionesEstilos = {
+        styles: {
+            backgroundColor: '#dff9fb',
+            color: '#130f40',
+            fontSize: '16px',
+        },
+    };
+
+    const moralejaTraducidaHTML = await moraleja.TranslateHTML('fr', opcionesEstilos); // Traduce al francés
+    console.log(moralejaTraducidaHTML);
+})();
+```
+
+### Lista de Idiomas Soportados
+
+| Idioma                 | Código  |
+|-------------------------|---------|
+| Afrikáans              | `af`    |
+| Albanés                | `sq`    |
+| Alemán                 | `de`    |
+| Amhárico               | `am`    |
+| Árabe                  | `ar`    |
+| Armenio                | `hy`    |
+| Azerí                  | `az`    |
+| Bambara                | `bm`    |
+| Basco                  | `eu`    |
+| Bielorruso             | `be`    |
+| Bengalí                | `bn`    |
+| Bislama                | `bi`    |
+| Bosnio                 | `bs`    |
+| Búlgaro                | `bg`    |
+| Catalán                | `ca`    |
+| Cebuan                 | `ceb`   |
+| Checo                  | `cs`    |
+| Chichewa               | `ny`    |
+| Chino (Simplificado)   | `zh-CN` |
+| Chino (Tradicional)    | `zh-TW` |
+| Córnico                | `kw`    |
+| Coreano                | `ko`    |
+| Corso                  | `co`    |
+| Criollo haitiano       | `ht`    |
+| Croata                 | `hr`    |
+| Danés                  | `da`    |
+| Dzongkha               | `dz`    |
+| Eslovaco               | `sk`    |
+| Esloveno               | `sl`    |
+| Español                | `es`    |
+| Estonio                | `et`    |
+| Feroés                 | `fo`    |
+| Finés                  | `fi`    |
+| Francés                | `fr`    |
+| Frisón                 | `fy`    |
+| Gaélico escocés        | `gd`    |
+| Galés                  | `cy`    |
+| Gallego                | `gl`    |
+| Georgiano              | `ka`    |
+| Griego                 | `el`    |
+| Guaraní                | `gn`    |
+| Gujarati               | `gu`    |
+| Hausa                  | `ha`    |
+| Hawaiano               | `haw`   |
+| Hebreo                 | `he`    |
+| Hindi                  | `hi`    |
+| Hmong                  | `hmn`   |
+| Húngaro                | `hu`    |
+| Igbo                   | `ig`    |
+| Indonesio              | `id`    |
+| Irlandés               | `ga`    |
+| Islandés               | `is`    |
+| Italiano               | `it`    |
+| Japonés                | `ja`    |
+| Javanés                | `jw`    |
+| Canarés                | `kn`    |
+| Kazajo                 | `kk`    |
+| Jemer                  | `km`    |
+| Kinyarwanda            | `rw`    |
+| Kirguís                | `ky`    |
+| Kurdo (Kurmanji)       | `ku`    |
+| Lao                    | `lo`    |
+| Latín                  | `la`    |
+| Letón                  | `lv`    |
+| Lituano                | `lt`    |
+| Luxemburgués           | `lb`    |
+| Macedonio              | `mk`    |
+| Malgache               | `mg`    |
+| Malayo                 | `ms`    |
+| Malabar                | `ml`    |
+| Maltés                 | `mt`    |
+| Maorí                  | `mi`    |
+| Marathi                | `mr`    |
+| Mongol                 | `mn`    |
+| Birmano                | `my`    |
+| Nepalí                 | `ne`    |
+| Noruego                | `no`    |
+| Oriya                  | `or`    |
+| Panyabí                | `pa`    |
+| Pastún                 | `ps`    |
+| Persa                  | `fa`    |
+| Polaco                 | `pl`    |
+| Portugués              | `pt`    |
+| Rumano                 | `ro`    |
+| Ruso                   | `ru`    |
+| Samoano                | `sm`    |
+| Gaélico escocés        | `gd`    |
+| Serbio                 | `sr`    |
+| Sesotho                | `st`    |
+| Shona                  | `sn`    |
+| Sindhi                 | `sd`    |
+| Cingalés               | `si`    |
+| Eslovaco               | `sk`    |
+| Somalí                 | `so`    |
+| Sotho                  | `st`    |
+| Español                | `es`    |
+| Sundanés               | `su`    |
+| Suajili                | `sw`    |
+| Sueco                  | `sv`    |
+| Tagalo                 | `tl`    |
+| Tayiko                 | `tg`    |
+| Tamil                  | `ta`    |
+| Tártaro                | `tt`    |
+| Telugu                 | `te`    |
+| Tailandés              | `th`    |
+| Turco                  | `tr`    |
+| Ucraniano              | `uk`    |
+| Uigur                  | `ug`    |
+| Uzbeko                 | `uz`    |
+| Vietnamita             | `vi`    |
+| Xhosa                  | `xh`    |
+| Yidis                  | `yi`    |
+| Yoruba                 | `yo`    |
+| Zulú                   | `zu`    |
+
+
 ## Contribución
 ¡Si tienes moralejas graciosas para agregar, no dudes en contribuir! Simplemente sigue estos pasos:
 

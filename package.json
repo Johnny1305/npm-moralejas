@@ -1,6 +1,6 @@
 {
   "name": "moralejas",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Envia una moraleja aleatoria",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,11 @@
     "web",
     "Javascript"
   ],
-  "repository":"https://github.com/Johnny1305/npm-moralejas.git",
+  "repository": "https://github.com/Johnny1305/npm-moralejas.git",
   "author": "Johnny13",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
+    "google-translate-api-x": "^10.7.2"
+  }
 }
