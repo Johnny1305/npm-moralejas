@@ -1,115 +1,1066 @@
 {
+    "version": 2,
+    "language": "es",
     "moralejas": [
-        "Más vale tarde que nunca, pero nunca es un buen momento para llegar tarde a una fiesta de piñatas.",
-        "Si la vida te da limones, probablemente alguien más te dará sal y tequila, ¡y ahí está la verdadera fiesta!",
-        "La paciencia es una virtud, pero esperar a que las palomitas se calienten en el microondas pone a prueba hasta al más paciente.",
-        "Nunca digas nunca, a menos que estés negando que te quedaste dormido durante una reunión importante.",
-        "Más vale ser cabeza de ratón que cola de león, a menos que seas el ratón en una película de Disney.",
-        "El que mucho come, mucho duerme, pero también mucho ronca, y eso puede causar problemas en una fiesta de pijamas.",
-        "Más vale prevenir que lamentar, pero si lamentar implica pedir pizza, entonces vale la pena correr el riesgo.",
-        "Nunca dejes para mañana lo que puedes hacer hoy, a menos que mañana sea día de pizza con descuento.",
-        "Quien mucho abarca, poco aprieta, pero quien mucho abraza, probablemente tiene un abrazo muy apretado.",
-        "Más vale prevenir que tener que explicar por qué decidiste aprender a hacer malabares con tijeras.",
-        "El que ríe último, probablemente no entendió el chiste porque estaba ocupado riéndose del chiste anterior.",
-        "Nunca digas siempre, a menos que estés enseñando a un robot a decir siempre 'siempre'.",
-        "Más vale pájaro en mano, especialmente si es un pájaro parlante que cuenta chistes.",
-        "La práctica hace al maestro, pero si practicas ser un ninja, probablemente te expulsen del gimnasio.",
-        "Más vale maña que sueño, pero si tienes sueño, es probable que ni siquiera sepas lo que significa 'maña'.",
-        "No hay mal que por bien no venga, a menos que el mal involucre perder el control remoto de la televisión.",
-        "Más vale tarde que en una fila del DMV, porque ahí el tiempo se congela.",
-        "La vida es como un juego de mesa, siempre hay alguien que voltea el tablero cuando las cosas no van como quieren.",
-        "Más vale ser un caballo de Troya que un unicornio, al menos en términos de sorpresa.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que sea una dieta, porque siempre puedes empezar mañana.",
-        "El que mucho mira Netflix, poco realiza ejercicio, pero mucho desarrolla habilidades avanzadas de maratón de series.",
-        "Más vale ser el último mono que el primer león en una competición de lanzamiento de plátanos.",
-        "La calma antes de la tormenta es un buen momento para practicar tus habilidades de interpretación meteorológica.",
-        "Nunca digas siempre, a menos que estés dando instrucciones sobre cómo armar muebles de IKEA.",
-        "Más vale tarde que embarazada, pero si llegas tarde a la fiesta, probablemente no te embaraces de chismes.",
-        "No hay mal que por bien no venga, excepto cuando tu pastel favorito se quema en el horno.",
-        "El que mucho escoge, mucho se equivoca, especialmente en la pista de baile.",
-        "Más vale ser el último en salir, porque ahí es cuando encuentras las sobras del buffet.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que sea una siesta, porque las siestas siempre pueden esperar.",
-        "Quien mucho apura, se queda sin helado antes de llegar a casa.",
-        "Más vale tarde que en una reunión de murciélagos, porque allí todos son nocturnos.",
-        "No hay mal que por bien no venga, excepto cuando tu despertador no suena y llegas tarde a tu cita.",
-        "El que mucho mira memes, poco realiza tareas, pero mucho se divierte.",
-        "Más vale ser el último en comprender un chiste, porque al menos eres el último en reír.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que sea doblar la ropa, porque eso siempre puede esperar.",
-        "Quien mucho come, mucho gasta en pantalones más grandes.",
-        "Más vale ser la excepción que la regla, especialmente si la regla es no comer pasteles antes de la cena.",
-        "Nunca digas nunca, a menos que te estén preguntando si alguna vez dijiste nunca.",
-        "Más vale ser un pez en el agua que un pez en la sartén.",
-        "La vida es como un espejo, sonríele y te devolverá una sonrisa, pero no intentes hacer muecas extrañas, podría ser incómodo.",
-        "Más vale ser un ave temprana que un búho cansado que no consigue café.",
-        "No hay mal que por bien no venga, excepto cuando tu helado se derrite antes de llegar a casa.",
-        "El que mucho abarca, poco abraza, pero mucho abrazo puede ser molesto si no te has duchado.",
-        "Más vale prevenir que lamentar, pero a veces lamentar es más divertido.",
-        "Nunca digas siempre, a menos que estés dando consejos sobre cómo mantener limpio tu escritorio.",
-        "Más vale ser el último en enterarse, porque entonces puedes actuar sorprendido.",
-        "La práctica hace al maestro, pero si practicas ser un detective, podrías terminar en una situación incómoda.",
-        "Más vale maña que sueño, pero si tienes sueño, probablemente no te importe tener poca maña.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que sea estudiar para un examen, porque procrastinar es un arte.",
-        "Quien mucho duerme, poco ve la televisión, pero al menos está descansado.",
-        "Más vale ser el último en rendirse, pero si estás jugando al escondite, no siempre es una buena estrategia.",
-        "La vida es como un rollo de papel higiénico, nunca sabes cuánto queda hasta que llegas al final.",
-        "Más vale tarde que en una fila del cine, porque las palomitas siempre valen la espera.",
-        "No hay mal que por bien no venga, excepto cuando ese mal implica perder el último episodio de tu serie favorita.",
-        "El que mucho mira al sol, probablemente necesite anteojos de sol.",
-        "Más vale ser el último en la pista de baile, porque así todos están ocupados mirando a otro lado.",
-        "Nunca digas siempre, a menos que estés describiendo el tiempo que pasas buscando las llaves del coche.",
-        "Más vale pájaro en mano, a menos que sea un pingüino, entonces es mejor en el Polo Sur.",
-        "Quien mucho come, mucho gasta en dentista.",
-        "La paciencia es una virtud, pero esperar a que la pizza se enfríe pone a prueba a los más virtuosos.",
-        "Más vale prevenir que lamentar, pero si lamentas no haber comprado más helado, es comprensible.",
-        "Nunca dejes para mañana lo que puedes hacer hoy, a menos que mañana sea día de inventar excusas.",
-        "El que mucho apura, generalmente es el que está en la cola del baño.",
-        "Más vale ser el último en enterarse de un chisme, porque entonces puedes actuar sorprendido cuando todos te cuenten.",
-        "No hay mal que por bien no venga, excepto cuando ese mal involucra perder el control remoto en la final del campeonato.",
-        "Más vale ser cabeza de ratón que cola de elefante, porque en las fiestas de disfraces, menos es más.",
-        "Quien mucho habla, mucho escucha, especialmente cuando está en problemas.",
-        "Más vale ser el último en subir al tren, porque así te aseguras de que nadie te robe el asiento.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que mañana sea el día mundial de la procrastinación.",
-        "La vida es como una película, a veces te quedas dormido en medio y te pierdes lo mejor.",
-        "Más vale ser el último mono que el primer orangután en una competición de monos.",
-        "Nunca digas siempre, a menos que estés describiendo el tiempo que pasas buscando tus anteojos.",
-        "Más vale ser el último en reír, porque entonces todos se preguntarán qué sabes que ellos no.",
-        "El que mucho come, mucho se lamenta de no haber dejado espacio para el postre.",
-        "Más vale tarde que en una fila para comprar el último modelo de teléfono, porque siempre hay una fila.",
-        "No hay mal que por bien no venga, excepto cuando ese mal implica quedarse sin batería en el teléfono en medio de la nada.",
-        "Más vale ser el último en la fila del cine, porque ahí es donde siempre encuentras las mejores palomitas.",
-        "Quien mucho come, mucho ronca, especialmente si la comida fue exquisita.",
-        "Más vale ser el último en comprender un chiste, porque al menos eres el último en sentirse incómodo.",
-        "La práctica hace al maestro, pero si practicas ser un detective, es posible que te tomen por un espía.",
-        "Más vale maña que sueño, a menos que estés soñando con ser un maestro de la maña.",
-        "Nunca digas nunca, a menos que estés haciendo una promesa de no volver a ver la serie que todos te recomiendan.",
-        "Más vale ser el último en llegar, porque así puedes elegir el mejor lugar.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que sea hacer ejercicio, porque siempre puedes empezar mañana.",
-        "Quien mucho duerme, mucho sueña, pero a veces también se le olvida la alarma.",
-        "Más vale ser el último mono que el primer pingüino en aprender a volar.",
-        "La vida es como un juego de cartas, a veces necesitas una buena mano para ganar.",
-        "Más vale ser el último en entender una broma, porque al menos te ríes más tiempo.",
-        "No hay mal que por bien no venga, excepto cuando ese mal involucra perder las llaves del coche en un día lluvioso.",
-        "El que mucho mira al sol, probablemente también piensa que puede vencerlo en una competición de resistencia visual.",
-        "Más vale ser el último en subir al autobús, porque así puedes elegir el asiento trasero.",
-        "Nunca digas siempre, a menos que estés dando instrucciones sobre cómo doblar una sábana correctamente.",
-        "Más vale pájaro en mano, a menos que sea un águila con garras afiladas.",
-        "Quien mucho habla por teléfono, mucho recarga la batería.",
-        "La paciencia es una virtud, pero esperar el pastel en el horno sin encenderlo es simplemente hambre.",
-        "Más vale prevenir que lamentar, pero si lamentar implica perder el último episodio de tu serie favorita, entonces es cuestionable.",
-        "Nunca dejes para mañana lo que puedes hacer hoy, a menos que mañana sea día de hacer absolutamente nada.",
-        "El que mucho apura, termina comprando cosas que no necesita.",
-        "Más vale ser el último en salir, porque así puedes apagar las luces.",
-        "No hay mal que por bien no venga, excepto cuando ese mal involucra perder el último asiento en el cine.",
-        "Más vale ser el último mono que el primer chimpancé en aprender trucos nuevos.",
-        "Quien mucho escoge, mucho gasta en la tienda de donas.",
-        "Más vale ser el último en comprender una tecnología nueva, porque así todos te preguntarán cómo funciona.",
-        "No dejes para mañana lo que puedes hacer hoy, a menos que mañana sea el día internacional de no hacer nada.",
-        "La vida es como una taza de café, a veces necesitas azúcar para que sea más llevadera.",
-        "Más vale ser el último en llegar al picnic, porque así todos te saludan y te ofrecen la mejor comida.",
-        "Nunca digas siempre, a menos que estés dando indicaciones para recordar siempre poner la tapa al vaso antes de agitarlo.",
-        "Más vale ser el último en enterarse de un rumor, porque entonces puedes actuar sorprendido cuando todos te lo cuenten.",
-        "El que mucho mira al sol, probablemente necesite anteojos de sol.",
-        "Más vale ser el último mono que el primer koala en una competición de abrazos.",
-        "No hay mal que por bien no venga, excepto cuando ese mal involucra perder el último tren para llegar a casa."
+        {
+            "id": 1,
+            "text": "Más vale tarde que nunca, pero llegar tarde a una fiesta de piñatas sigue siendo una estrategia cuestionable.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "fiestas",
+                "tiempo"
+            ]
+        },
+        {
+            "id": 2,
+            "text": "Si la vida te da limones, busca la sal: algunas decisiones necesitan menos filosofía y más aperitivo.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "comida",
+                "vida"
+            ]
+        },
+        {
+            "id": 3,
+            "text": "La paciencia es una virtud, pero esperar a que cargue una página con Wi-Fi malo es un máster acelerado.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "paciencia",
+                "internet"
+            ]
+        },
+        {
+            "id": 4,
+            "text": "Nunca digas nunca, salvo que estés prometiendo no volver a decir nunca.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "contradicciones",
+                "palabras"
+            ]
+        },
+        {
+            "id": 5,
+            "text": "Más vale ser cabeza de ratón que cola de león, aunque ser el ratón que organiza la fiesta tampoco está nada mal.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "animales",
+                "liderazgo"
+            ]
+        },
+        {
+            "id": 6,
+            "text": "El que mucho come, mucho duerme; y el que mucho duerme, probablemente necesitaba descansar.",
+            "language": "es",
+            "category": "vida",
+            "tags": [
+                "comida",
+                "descanso"
+            ]
+        },
+        {
+            "id": 7,
+            "text": "Más vale prevenir que lamentar, especialmente cuando el desastre empieza con un «seguro que no pasa nada».",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "prevencion",
+                "decisiones"
+            ]
+        },
+        {
+            "id": 8,
+            "text": "No dejes para mañana lo que puedes hacer hoy, excepto si hoy necesitas urgentemente una siesta.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "procrastinacion",
+                "descanso"
+            ]
+        },
+        {
+            "id": 9,
+            "text": "Quien mucho abarca, poco aprieta; quien mucho abraza, al menos deja a alguien contento.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "amistad",
+                "humor"
+            ]
+        },
+        {
+            "id": 10,
+            "text": "Más vale maña que fuerza, sobre todo cuando la fuerza acaba rompiendo lo que intentabas arreglar.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "ingenio",
+                "paciencia"
+            ]
+        },
+        {
+            "id": 11,
+            "text": "El que ríe último quizá entendió el chiste tarde, pero al menos se llevó la última carcajada.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "risas",
+                "tiempo"
+            ]
+        },
+        {
+            "id": 12,
+            "text": "La práctica hace al maestro, aunque nadie se convierte en maestro después de practicar solo cinco minutos.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "aprendizaje",
+                "esfuerzo"
+            ]
+        },
+        {
+            "id": 13,
+            "text": "No hay mal que por bien no venga, pero a veces el bien necesita que le abras la puerta.",
+            "language": "es",
+            "category": "vida",
+            "tags": [
+                "oportunidades",
+                "actitud"
+            ]
+        },
+        {
+            "id": 14,
+            "text": "La vida es como un juego de mesa: gana más quien sabe jugar que quien se enfada cuando pierde.",
+            "language": "es",
+            "category": "vida",
+            "tags": [
+                "juegos",
+                "actitud"
+            ]
+        },
+        {
+            "id": 15,
+            "text": "Más vale pájaro en mano que una promesa de veinte pájaros que todavía están buscando dónde aterrizar.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "decisiones",
+                "realismo"
+            ]
+        },
+        {
+            "id": 16,
+            "text": "La calma antes de la tormenta es un buen momento para guardar el móvil y disfrutar del silencio.",
+            "language": "es",
+            "category": "vida",
+            "tags": [
+                "calma",
+                "reflexion"
+            ]
+        },
+        {
+            "id": 17,
+            "text": "El que mucho escoge, a veces termina cenando lo mismo que habría elegido en diez segundos.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "decisiones",
+                "comida"
+            ]
+        },
+        {
+            "id": 18,
+            "text": "Más vale ser el último en llegar que el primero en llegar sin saber para qué has venido.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "tiempo",
+                "organizacion"
+            ]
+        },
+        {
+            "id": 19,
+            "text": "Una dieta puede empezar mañana, pero una buena decisión puede empezar con la siguiente comida.",
+            "language": "es",
+            "category": "vida",
+            "tags": [
+                "comida",
+                "habitos"
+            ]
+        },
+        {
+            "id": 20,
+            "text": "Quien mucho mira series, desarrolla una resistencia admirable para decir «un capítulo más».",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "series",
+                "ocio"
+            ]
+        },
+        {
+            "id": 21,
+            "text": "Más vale prevenir una mala compra que explicar durante tres años por qué necesitabas otro gadget.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "compras",
+                "gadgets"
+            ]
+        },
+        {
+            "id": 22,
+            "text": "La paciencia se entrena esperando el café; la sabiduría llega cuando dejas de mirar el reloj.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "cafe",
+                "paciencia"
+            ]
+        },
+        {
+            "id": 23,
+            "text": "Nunca subestimes una buena siesta: a veces el cerebro solo necesita reiniciarse.",
+            "language": "es",
+            "category": "vida",
+            "tags": [
+                "descanso",
+                "bienestar"
+            ]
+        },
+        {
+            "id": 24,
+            "text": "Más vale una idea sencilla que veinte ideas brillantes que nunca salen del cuaderno.",
+            "language": "es",
+            "category": "trabajo",
+            "tags": [
+                "ideas",
+                "accion"
+            ]
+        },
+        {
+            "id": 25,
+            "text": "Quien mucho habla también debería reservar un minuto para escuchar.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "comunicacion",
+                "escucha"
+            ]
+        },
+        {
+            "id": 26,
+            "text": "El que pregunta aprende; el que nunca pregunta acaba buscando respuestas en lugares bastante extraños.",
+            "language": "es",
+            "category": "aprendizaje",
+            "tags": [
+                "preguntas",
+                "curiosidad"
+            ]
+        },
+        {
+            "id": 27,
+            "text": "La experiencia es esa profesora que cobra las matrículas después de la lección.",
+            "language": "es",
+            "category": "aprendizaje",
+            "tags": [
+                "experiencia",
+                "errores"
+            ]
+        },
+        {
+            "id": 28,
+            "text": "Un error no siempre es un fracaso: a veces es un tutorial que nadie quería comprar.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "errores",
+                "aprendizaje"
+            ]
+        },
+        {
+            "id": 29,
+            "text": "Más vale empezar despacio que pasar años esperando el momento perfecto.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "comienzos",
+                "accion"
+            ]
+        },
+        {
+            "id": 30,
+            "text": "Si no sabes por dónde empezar, empieza por ordenar una cosa; el caos también se asusta con pequeños avances.",
+            "language": "es",
+            "category": "organizacion",
+            "tags": [
+                "orden",
+                "progreso"
+            ]
+        },
+        {
+            "id": 31,
+            "text": "La motivación puede llegar tarde; los buenos hábitos suelen saber el camino.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "motivacion",
+                "habitos"
+            ]
+        },
+        {
+            "id": 32,
+            "text": "No hace falta correr para avanzar: incluso una tortuga tiene un plan de viaje.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "progreso",
+                "animales"
+            ]
+        },
+        {
+            "id": 33,
+            "text": "El éxito no siempre hace ruido; a veces parece una tarea terminada antes de cenar.",
+            "language": "es",
+            "category": "trabajo",
+            "tags": [
+                "exito",
+                "productividad"
+            ]
+        },
+        {
+            "id": 34,
+            "text": "Una lista de tareas demasiado larga también necesita vacaciones.",
+            "language": "es",
+            "category": "trabajo",
+            "tags": [
+                "productividad",
+                "humor"
+            ]
+        },
+        {
+            "id": 35,
+            "text": "Si todo parece urgente, probablemente algo necesita ser ordenado antes de ser atendido.",
+            "language": "es",
+            "category": "trabajo",
+            "tags": [
+                "prioridades",
+                "organizacion"
+            ]
+        },
+        {
+            "id": 36,
+            "text": "Trabajar más no siempre es trabajar mejor; hasta el ordenador necesita reiniciarse.",
+            "language": "es",
+            "category": "trabajo",
+            "tags": [
+                "productividad",
+                "descanso"
+            ]
+        },
+        {
+            "id": 37,
+            "text": "Una reunión que podría haber sido un mensaje también puede enseñarte paciencia.",
+            "language": "es",
+            "category": "trabajo",
+            "tags": [
+                "reuniones",
+                "humor"
+            ]
+        },
+        {
+            "id": 38,
+            "text": "El mejor momento para guardar una copia de seguridad fue antes del problema; el segundo mejor es ahora.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "seguridad",
+                "copias"
+            ]
+        },
+        {
+            "id": 39,
+            "text": "La contraseña más segura es la que no se llama «123456».",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "seguridad",
+                "internet"
+            ]
+        },
+        {
+            "id": 40,
+            "text": "Actualizar el software puede parecer aburrido hasta que descubres por qué existía la actualización.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "software",
+                "seguridad"
+            ]
+        },
+        {
+            "id": 41,
+            "text": "Si algo funciona, aprende cómo funciona antes de tocarlo diez veces por curiosidad.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "curiosidad",
+                "precaucion"
+            ]
+        },
+        {
+            "id": 42,
+            "text": "El cable que necesitas siempre es el que decidiste no guardar.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "cables",
+                "organizacion"
+            ]
+        },
+        {
+            "id": 43,
+            "text": "Una batería al uno por ciento convierte cualquier paseo en una aventura.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "movil",
+                "bateria"
+            ]
+        },
+        {
+            "id": 44,
+            "text": "En internet todo parece urgente hasta que cierras la pestaña.",
+            "language": "es",
+            "category": "tecnologia",
+            "tags": [
+                "internet",
+                "perspectiva"
+            ]
+        },
+        {
+            "id": 45,
+            "text": "El amor es paciencia, comunicación y aceptar que alguien puede tener razón de vez en cuando.",
+            "language": "es",
+            "category": "amor",
+            "tags": [
+                "pareja",
+                "comunicacion"
+            ]
+        },
+        {
+            "id": 46,
+            "text": "Una buena relación no necesita ganar discusiones; necesita perder menos conversaciones importantes.",
+            "language": "es",
+            "category": "amor",
+            "tags": [
+                "pareja",
+                "dialogo"
+            ]
+        },
+        {
+            "id": 47,
+            "text": "Quien quiere de verdad no necesita tener siempre la última palabra.",
+            "language": "es",
+            "category": "amor",
+            "tags": [
+                "respeto",
+                "pareja"
+            ]
+        },
+        {
+            "id": 48,
+            "text": "El mejor regalo no siempre viene envuelto; a veces llega con tiempo, atención y cero notificaciones.",
+            "language": "es",
+            "category": "amor",
+            "tags": [
+                "tiempo",
+                "atencion"
+            ]
+        },
+        {
+            "id": 49,
+            "text": "Una amistad que sobrevive a un viaje juntos merece al menos una comida de celebración.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "viajes",
+                "amigos"
+            ]
+        },
+        {
+            "id": 50,
+            "text": "Los buenos amigos conocen tus defectos y aun así reservan mesa para ti.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "amigos",
+                "humor"
+            ]
+        },
+        {
+            "id": 51,
+            "text": "Compartir una pizza es una forma bastante eficiente de negociar la paz.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "pizza",
+                "amistad"
+            ]
+        },
+        {
+            "id": 52,
+            "text": "Un amigo de verdad te dice la verdad; un gran amigo también te avisa si llevas algo entre los dientes.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "honestidad",
+                "humor"
+            ]
+        },
+        {
+            "id": 53,
+            "text": "La familia puede discutir por la cena y cinco minutos después estar discutiendo qué postre pedir.",
+            "language": "es",
+            "category": "familia",
+            "tags": [
+                "familia",
+                "comida"
+            ]
+        },
+        {
+            "id": 54,
+            "text": "En una casa con niños, el silencio no siempre significa paz; a veces significa que están tramando algo.",
+            "language": "es",
+            "category": "familia",
+            "tags": [
+                "familia",
+                "humor"
+            ]
+        },
+        {
+            "id": 55,
+            "text": "La mejor receta familiar casi siempre incluye una historia que nadie recuerda igual.",
+            "language": "es",
+            "category": "familia",
+            "tags": [
+                "recetas",
+                "recuerdos"
+            ]
+        },
+        {
+            "id": 56,
+            "text": "Los recuerdos más caros no siempre cuestan dinero; algunos solo necesitan una mesa y tiempo.",
+            "language": "es",
+            "category": "familia",
+            "tags": [
+                "recuerdos",
+                "tiempo"
+            ]
+        },
+        {
+            "id": 57,
+            "text": "Viajar te enseña que el mapa sabe dónde estás, pero no siempre sabe dónde quieres comer.",
+            "language": "es",
+            "category": "viajes",
+            "tags": [
+                "viajes",
+                "comida"
+            ]
+        },
+        {
+            "id": 58,
+            "text": "Un buen viaje empieza con ilusión y termina con una galería llena de fotos que nunca ordenarás.",
+            "language": "es",
+            "category": "viajes",
+            "tags": [
+                "fotos",
+                "humor"
+            ]
+        },
+        {
+            "id": 59,
+            "text": "Perderse un poco puede ser parte del itinerario si todavía sabes volver.",
+            "language": "es",
+            "category": "viajes",
+            "tags": [
+                "aventura",
+                "orientacion"
+            ]
+        },
+        {
+            "id": 60,
+            "text": "El mejor souvenir de un viaje suele ser la historia que cuentas cuando vuelves.",
+            "language": "es",
+            "category": "viajes",
+            "tags": [
+                "recuerdos",
+                "aventura"
+            ]
+        },
+        {
+            "id": 61,
+            "text": "Cocinar para uno mismo sigue contando como autocuidado, especialmente si hay postre.",
+            "language": "es",
+            "category": "comida",
+            "tags": [
+                "cocina",
+                "autocuidado"
+            ]
+        },
+        {
+            "id": 62,
+            "text": "El café no resuelve todos los problemas, pero mejora considerablemente las conversaciones sobre ellos.",
+            "language": "es",
+            "category": "comida",
+            "tags": [
+                "cafe",
+                "humor"
+            ]
+        },
+        {
+            "id": 63,
+            "text": "Una pizza compartida sabe mejor, excepto cuando alguien se queda con el último trozo sin preguntar.",
+            "language": "es",
+            "category": "comida",
+            "tags": [
+                "pizza",
+                "amistad"
+            ]
+        },
+        {
+            "id": 64,
+            "text": "La receta dice diez minutos; la cocina dice que ya veremos.",
+            "language": "es",
+            "category": "comida",
+            "tags": [
+                "cocina",
+                "humor"
+            ]
+        },
+        {
+            "id": 65,
+            "text": "El postre no es una decisión impulsiva si llevas toda la comida pensando en él.",
+            "language": "es",
+            "category": "comida",
+            "tags": [
+                "postre",
+                "humor"
+            ]
+        },
+        {
+            "id": 66,
+            "text": "El dinero compra cosas, pero no compra una tarde que ya pasó.",
+            "language": "es",
+            "category": "dinero",
+            "tags": [
+                "tiempo",
+                "perspectiva"
+            ]
+        },
+        {
+            "id": 67,
+            "text": "Ahorrar no significa dejar de disfrutar; significa decidir qué merece la pena.",
+            "language": "es",
+            "category": "dinero",
+            "tags": [
+                "ahorro",
+                "decisiones"
+            ]
+        },
+        {
+            "id": 68,
+            "text": "Una oferta deja de ser oferta cuando compras algo que no necesitabas.",
+            "language": "es",
+            "category": "dinero",
+            "tags": [
+                "compras",
+                "consumo"
+            ]
+        },
+        {
+            "id": 69,
+            "text": "El presupuesto es la forma adulta de preguntarle al futuro si puede pagar la factura.",
+            "language": "es",
+            "category": "dinero",
+            "tags": [
+                "presupuesto",
+                "humor"
+            ]
+        },
+        {
+            "id": 70,
+            "text": "Gastar menos no siempre es ganar más, pero gastar con intención suele doler menos.",
+            "language": "es",
+            "category": "dinero",
+            "tags": [
+                "consumo",
+                "decisiones"
+            ]
+        },
+        {
+            "id": 71,
+            "text": "La naturaleza no tiene prisa, y aun así consigue que las estaciones lleguen a tiempo.",
+            "language": "es",
+            "category": "naturaleza",
+            "tags": [
+                "naturaleza",
+                "paciencia"
+            ]
+        },
+        {
+            "id": 72,
+            "text": "Un paseo sin destino puede acabar siendo la mejor parte del día.",
+            "language": "es",
+            "category": "naturaleza",
+            "tags": [
+                "paseo",
+                "calma"
+            ]
+        },
+        {
+            "id": 73,
+            "text": "Los árboles no consultan el calendario para crecer; simplemente siguen creciendo.",
+            "language": "es",
+            "category": "naturaleza",
+            "tags": [
+                "crecimiento",
+                "paciencia"
+            ]
+        },
+        {
+            "id": 74,
+            "text": "A veces mirar el cielo durante cinco minutos arregla problemas que cinco minutos de pantalla no arreglan.",
+            "language": "es",
+            "category": "naturaleza",
+            "tags": [
+                "calma",
+                "desconexion"
+            ]
+        },
+        {
+            "id": 75,
+            "text": "Hasta el cactus sabe que poner límites también es una forma de cuidarse.",
+            "language": "es",
+            "category": "naturaleza",
+            "tags": [
+                "limites",
+                "plantas"
+            ]
+        },
+        {
+            "id": 76,
+            "text": "Dormir bien es una inversión con una rentabilidad bastante fácil de notar.",
+            "language": "es",
+            "category": "bienestar",
+            "tags": [
+                "sueño",
+                "descanso"
+            ]
+        },
+        {
+            "id": 77,
+            "text": "Descansar no es abandonar el camino; es comprobar que todavía quieres seguirlo.",
+            "language": "es",
+            "category": "bienestar",
+            "tags": [
+                "descanso",
+                "reflexion"
+            ]
+        },
+        {
+            "id": 78,
+            "text": "No todo cansancio se arregla con café; algunos necesitan una noche completa.",
+            "language": "es",
+            "category": "bienestar",
+            "tags": [
+                "cafe",
+                "sueño"
+            ]
+        },
+        {
+            "id": 79,
+            "text": "Tu cuerpo también manda notificaciones, aunque no aparezcan en la pantalla.",
+            "language": "es",
+            "category": "bienestar",
+            "tags": [
+                "cuerpo",
+                "atencion"
+            ]
+        },
+        {
+            "id": 80,
+            "text": "A veces decir «no» es la manera más rápida de recuperar tiempo para lo importante.",
+            "language": "es",
+            "category": "bienestar",
+            "tags": [
+                "limites",
+                "tiempo"
+            ]
+        },
+        {
+            "id": 81,
+            "text": "La confianza se construye despacio y se puede romper con una sola contraseña compartida.",
+            "language": "es",
+            "category": "seguridad",
+            "tags": [
+                "confianza",
+                "privacidad"
+            ]
+        },
+        {
+            "id": 82,
+            "text": "Guardar secretos ajenos también es una forma de responsabilidad.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "confianza",
+                "respeto"
+            ]
+        },
+        {
+            "id": 83,
+            "text": "Decir la verdad con tacto suele llegar más lejos que decirla con orgullo.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "honestidad",
+                "respeto"
+            ]
+        },
+        {
+            "id": 84,
+            "text": "Escuchar para responder es fácil; escuchar para entender requiere práctica.",
+            "language": "es",
+            "category": "aprendizaje",
+            "tags": [
+                "escucha",
+                "comunicacion"
+            ]
+        },
+        {
+            "id": 85,
+            "text": "Cambiar de opinión después de aprender algo nuevo no es perder; es actualizarse.",
+            "language": "es",
+            "category": "aprendizaje",
+            "tags": [
+                "aprendizaje",
+                "cambio"
+            ]
+        },
+        {
+            "id": 86,
+            "text": "La curiosidad abre puertas; la prudencia decide cuáles conviene atravesar.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "curiosidad",
+                "prudencia"
+            ]
+        },
+        {
+            "id": 87,
+            "text": "No necesitas tener todas las respuestas para hacer una buena pregunta.",
+            "language": "es",
+            "category": "aprendizaje",
+            "tags": [
+                "preguntas",
+                "curiosidad"
+            ]
+        },
+        {
+            "id": 88,
+            "text": "La mejor versión de ti no aparece de golpe; llega después de muchas pequeñas decisiones.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "progreso",
+                "habitos"
+            ]
+        },
+        {
+            "id": 89,
+            "text": "Compararte con otros es como medir tu viaje con el mapa de otra persona.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "comparacion",
+                "autoestima"
+            ]
+        },
+        {
+            "id": 90,
+            "text": "No todos los días son productivos, pero casi todos pueden enseñarte algo.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "aprendizaje",
+                "vida"
+            ]
+        },
+        {
+            "id": 91,
+            "text": "Caerse enseña poco si solo piensas en el suelo; levantarse enseña bastante más.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "errores",
+                "resiliencia"
+            ]
+        },
+        {
+            "id": 92,
+            "text": "Un plan perfecto que nunca empieza vale menos que uno sencillo que se pone en marcha.",
+            "language": "es",
+            "category": "organizacion",
+            "tags": [
+                "planes",
+                "accion"
+            ]
+        },
+        {
+            "id": 93,
+            "text": "Ordenar el escritorio no arregla la vida, pero al menos deja una superficie libre para pensar.",
+            "language": "es",
+            "category": "organizacion",
+            "tags": [
+                "orden",
+                "humor"
+            ]
+        },
+        {
+            "id": 94,
+            "text": "Si tardas más en elegir qué hacer que en hacerlo, quizá ya tienes la respuesta.",
+            "language": "es",
+            "category": "organizacion",
+            "tags": [
+                "decisiones",
+                "accion"
+            ]
+        },
+        {
+            "id": 95,
+            "text": "Una agenda llena no siempre significa una vida llena; también puede significar demasiadas citas.",
+            "language": "es",
+            "category": "organizacion",
+            "tags": [
+                "agenda",
+                "prioridades"
+            ]
+        },
+        {
+            "id": 96,
+            "text": "El humor no arregla todos los problemas, pero puede hacer que pesen un poco menos.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "humor",
+                "vida"
+            ]
+        },
+        {
+            "id": 97,
+            "text": "Reírse de uno mismo requiere menos esfuerzo que intentar parecer perfecto todo el día.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "autoestima",
+                "humor"
+            ]
+        },
+        {
+            "id": 98,
+            "text": "Un buen chiste necesita timing; una buena decisión también.",
+            "language": "es",
+            "category": "humor",
+            "tags": [
+                "decisiones",
+                "tiempo"
+            ]
+        },
+        {
+            "id": 99,
+            "text": "Si el plan A falla, todavía quedan muchas letras antes de llegar al plan Z.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "planes",
+                "resiliencia"
+            ]
+        },
+        {
+            "id": 100,
+            "text": "A veces el camino correcto empieza con admitir que el anterior no funcionaba.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "cambio",
+                "aprendizaje"
+            ]
+        },
+        {
+            "id": 101,
+            "text": "No todo lo que puedes hacer merece la pena hacerlo.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "prioridades",
+                "decisiones"
+            ]
+        },
+        {
+            "id": 102,
+            "text": "El tiempo es el único recurso que no acepta devoluciones.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "tiempo",
+                "prioridades"
+            ]
+        },
+        {
+            "id": 103,
+            "text": "Lo sencillo suele parecer fácil después de haber aprendido a hacerlo.",
+            "language": "es",
+            "category": "aprendizaje",
+            "tags": [
+                "experiencia",
+                "aprendizaje"
+            ]
+        },
+        {
+            "id": 104,
+            "text": "La mejor excusa para empezar algo nuevo es dejar de esperar una excusa perfecta.",
+            "language": "es",
+            "category": "superacion",
+            "tags": [
+                "comienzos",
+                "accion"
+            ]
+        },
+        {
+            "id": 105,
+            "text": "Cuando no puedas controlar el resultado, al menos controla cómo llegas hasta él.",
+            "language": "es",
+            "category": "sabiduria",
+            "tags": [
+                "control",
+                "actitud"
+            ]
+        },
+        {
+            "id": 106,
+            "text": "Una buena conversación puede cambiar una tarde; una buena conversación con café puede cambiar dos.",
+            "language": "es",
+            "category": "amistad",
+            "tags": [
+                "cafe",
+                "conversacion"
+            ]
+        }
     ]
 }
