@@ -1,0 +1,7 @@
+package-lock.json
+node_modules/
+src/
+README.md
+CHANGELOG.md
+.github/FUNDING.yml
+*.tgz

@@ -1,4 +1,3 @@
-const translate = require('google-translate-api-x');
 const { moralejas } = require('./src/moralejas.json');
 
 const DEFAULT_HTML_STYLES = {
@@ -14,18 +13,31 @@ const DEFAULT_HTML_STYLES = {
     color: '#2c3e50'
 };
 
-let lastIds = [];
+const DEFAULT_HISTORY_SIZE = 10;
+const DEFAULT_SEARCH_LIMIT = 20;
 
-/**
- * Devuelve un índice aleatorio.
- */
+// Historial por combinación de filtros. Un servidor con varias peticiones
+// concurrentes debería pasar `options.history` para no compartir estado.
+const histories = new Map();
+
+let translator = null;
+
 function randomIndex(length) {
     return Math.floor(Math.random() * length);
 }
 
-/**
- * Normaliza un texto para facilitar búsquedas y comparaciones.
- */
+function shuffle(items) {
+    const copy = [...items];
+
+    for (let i = copy.length - 1; i > 0; i--) {
+        const j = randomIndex(i + 1);
+
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+
+    return copy;
+}
+
 function normalize(value) {
     return String(value ?? '')
         .normalize('NFD')
@@ -34,9 +46,12 @@ function normalize(value) {
         .trim();
 }
 
-/**
- * Busca una moraleja por ID.
- */
+function tokenize(value) {
+    return normalize(value)
+        .split(/[^a-z0-9]+/)
+        .filter(Boolean);
+}
+
 function getById(id) {
     const numericId = Number(id);
 
@@ -47,9 +62,6 @@ function getById(id) {
     return moralejas.find((item) => item.id === numericId);
 }
 
-/**
- * Comprueba si una moraleja coincide con los filtros.
- */
 function matches(item, options = {}) {
     if (
         options.category &&
@@ -68,11 +80,7 @@ function matches(item, options = {}) {
     if (Array.isArray(options.tags) && options.tags.length > 0) {
         const itemTags = item.tags.map(normalize);
 
-        if (
-            !options.tags.every((tag) =>
-                itemTags.includes(normalize(tag))
-            )
-        ) {
+        if (!options.tags.every((tag) => itemTags.includes(normalize(tag)))) {
             return false;
         }
     }
@@ -80,24 +88,10 @@ function matches(item, options = {}) {
     return true;
 }
 
-/**
- * Obtiene las moralejas que cumplen los filtros.
- */
 function getPool(options = {}) {
-    const pool = moralejas.filter((item) => matches(item, options));
-
-    if (pool.length === 0) {
-        throw new Error(
-            'No hay moralejas que coincidan con los filtros indicados.'
-        );
-    }
-
-    return pool;
+    return moralejas.filter((item) => matches(item, options));
 }
 
-/**
- * Devuelve una copia de una moraleja.
- */
 function clone(item) {
     if (!item) {
         return undefined;
@@ -109,129 +103,153 @@ function clone(item) {
     };
 }
 
+function historyKey(options) {
+    return JSON.stringify([
+        normalize(options.category),
+        normalize(options.language),
+        Array.isArray(options.tags) ? options.tags.map(normalize).sort() : []
+    ]);
+}
+
+function readHistory(options, poolSize) {
+    const requestedSize = Math.floor(Number(options.historySize));
+    const maxSize = Math.max(poolSize - 1, 1);
+
+    const size =
+        Number.isFinite(requestedSize) && requestedSize >= 1
+            ? Math.min(requestedSize, maxSize)
+            : Math.min(DEFAULT_HISTORY_SIZE, maxSize);
+
+    const explicit = Array.isArray(options.history)
+        ? options.history.map(Number).filter(Number.isInteger)
+        : null;
+
+    const key = historyKey(options);
+
+    return {
+        key,
+        size,
+        ids: explicit ?? histories.get(key) ?? [],
+        explicit: explicit !== null
+    };
+}
+
+function rememberHistory(history, ids) {
+    if (history.explicit) {
+        return;
+    }
+
+    histories.set(history.key, [...new Set(ids)].slice(0, history.size));
+}
+
 /**
- * Obtiene una moraleja aleatoria.
+ * Devuelve una moraleja aleatoria.
  *
- * Opciones:
- * - category
- * - language
- * - tags
- * - avoidRepeat
- * - historySize
+ * Opciones: category, language, tags, avoidRepeat, historySize y history.
+ * Si se indica `history` (array de IDs), el llamador gestiona las repeticiones.
  */
 function random(options = {}) {
     const pool = getPool(options);
 
-    const avoidRepeat = options.avoidRepeat ?? true;
-
-    let available = pool;
-
-    if (avoidRepeat && pool.length > 1) {
-        const previousIds = new Set(lastIds);
-
-        const filtered = pool.filter(
-            (item) => !previousIds.has(item.id)
-        );
-
-        if (filtered.length > 0) {
-            available = filtered;
-        }
+    if (pool.length === 0) {
+        return undefined;
     }
 
-    const selected =
-        available[randomIndex(available.length)];
-
-    if (avoidRepeat) {
-        const historySize = Math.min(
-            Math.max(Number(options.historySize) || 10, 1),
-            Math.max(pool.length - 1, 1)
-        );
-
-        lastIds = [
-            selected.id,
-            ...lastIds.filter((id) => id !== selected.id)
-        ].slice(0, historySize);
+    if (!(options.avoidRepeat ?? true)) {
+        return clone(pool[randomIndex(pool.length)]);
     }
+
+    const history = readHistory(options, pool.length);
+    const seen = new Set(history.ids);
+    const unseen = pool.filter((item) => !seen.has(item.id));
+    const available = unseen.length > 0 ? unseen : pool;
+    const selected = available[randomIndex(available.length)];
+
+    rememberHistory(history, [selected.id, ...history.ids]);
 
     return clone(selected);
 }
 
 /**
- * Obtiene varias moralejas aleatorias sin repetir.
+ * Devuelve varias moralejas aleatorias sin repetir dentro del lote.
  */
 function randomMany(count = 1, options = {}) {
     const requested = Number(count);
 
     if (!Number.isInteger(requested) || requested < 1) {
-        throw new TypeError(
-            'count debe ser un entero mayor que 0.'
-        );
+        throw new TypeError('count debe ser un entero mayor que 0.');
     }
 
     const pool = getPool(options);
 
-    const amount = Math.min(requested, pool.length);
-
-    const result = [];
-    const used = new Set();
-
-    while (result.length < amount) {
-        const available = pool.filter(
-            (item) => !used.has(item.id)
-        );
-
-        const selected =
-            available[randomIndex(available.length)];
-
-        used.add(selected.id);
-        result.push(clone(selected));
+    if (pool.length === 0) {
+        return [];
     }
 
-    return result;
+    const amount = Math.min(requested, pool.length);
+    const shuffled = shuffle(pool);
+
+    if (!(options.avoidRepeat ?? true)) {
+        return shuffled.slice(0, amount).map(clone);
+    }
+
+    const history = readHistory(options, pool.length);
+    const seen = new Set(history.ids);
+    const ordered = [
+        ...shuffled.filter((item) => !seen.has(item.id)),
+        ...shuffled.filter((item) => seen.has(item.id))
+    ].slice(0, amount);
+
+    rememberHistory(
+        history,
+        ordered.map((item) => item.id).concat(history.ids)
+    );
+
+    return ordered.map(clone);
 }
 
-/**
- * Obtiene una moraleja por ID.
- */
 function get(id) {
     return clone(getById(id));
 }
 
 /**
- * Busca moralejas por texto, categoría o tags.
+ * Busca por una o varias palabras en texto, categoría y etiquetas.
+ * Cada palabra debe aparecer en algún campo; se puntúan las coincidencias.
  */
 function search(query, options = {}) {
-    const term = normalize(query);
+    const terms = tokenize(query);
 
-    if (!term) {
+    if (terms.length === 0) {
         return [];
     }
 
-    const limit = Number.isInteger(Number(options.limit))
-        ? Math.max(Number(options.limit), 1)
-        : 20;
+    const requestedLimit = Number(options.limit);
+    const limit = Number.isInteger(requestedLimit)
+        ? Math.max(requestedLimit, 1)
+        : DEFAULT_SEARCH_LIMIT;
 
     return moralejas
         .filter((item) => matches(item, options))
         .map((item) => {
-            const haystack = normalize(
-                [
-                    item.text,
-                    item.category,
-                    ...item.tags
-                ].join(' ')
-            );
+            const text = normalize(item.text);
+            const words = new Set(tokenize(item.text));
+            const meta = normalize([item.category, ...item.tags].join(' '));
 
-            const score = haystack.includes(term)
-                ? normalize(item.text).includes(term)
-                    ? 2
-                    : 1
-                : 0;
+            let score = 0;
 
-            return {
-                item,
-                score
-            };
+            for (const term of terms) {
+                if (words.has(term)) {
+                    score += 3;
+                } else if (text.includes(term)) {
+                    score += 2;
+                } else if (meta.includes(term)) {
+                    score += 1;
+                } else {
+                    return { item, score: 0 };
+                }
+            }
+
+            return { item, score };
         })
         .filter(({ score }) => score > 0)
         .sort((a, b) => b.score - a.score)
@@ -239,31 +257,14 @@ function search(query, options = {}) {
         .map(({ item }) => clone(item));
 }
 
-/**
- * Devuelve todas las categorías disponibles.
- */
 function categories() {
-    return [
-        ...new Set(
-            moralejas.map((item) => item.category)
-        )
-    ].sort();
+    return [...new Set(moralejas.map((item) => item.category))].sort();
 }
 
-/**
- * Devuelve todos los tags disponibles.
- */
 function tags() {
-    return [
-        ...new Set(
-            moralejas.flatMap((item) => item.tags)
-        )
-    ].sort();
+    return [...new Set(moralejas.flatMap((item) => item.tags))].sort();
 }
 
-/**
- * Escapa caracteres HTML para evitar inyección.
- */
 function escapeHTML(value) {
     return String(value)
         .replace(/&/g, '&amp;')
@@ -274,22 +275,13 @@ function escapeHTML(value) {
 }
 
 /**
- * Convierte una moraleja en HTML.
- *
- * Puede recibir:
- * - un objeto moraleja
- * - un texto directamente
+ * Convierte una moraleja (o un texto) en un bloque HTML.
+ * Los valores de `options.styles` se insertan tal cual: no deben venir de usuarios.
  */
 function toHTML(moraleja, options = {}) {
-    const item =
-        typeof moraleja === 'string'
-            ? { text: moraleja }
-            : moraleja;
+    const item = typeof moraleja === 'string' ? { text: moraleja } : moraleja;
 
-    if (
-        !item ||
-        typeof item.text !== 'string'
-    ) {
+    if (!item || typeof item.text !== 'string') {
         throw new TypeError(
             'toHTML necesita una moraleja o un objeto con una propiedad text.'
         );
@@ -319,64 +311,41 @@ function toHTML(moraleja, options = {}) {
 </div>`.trim();
 }
 
-/**
- * Traduce un texto.
- */
-async function translateText(
-    text,
-    language = 'en'
-) {
-    if (
-        typeof text !== 'string' ||
-        !text.trim()
-    ) {
-        throw new TypeError(
-            'text debe ser una cadena no vacía.'
-        );
+// La dependencia de traducción se carga solo al usarla, para no penalizar
+// a quien únicamente necesita random/search/toHTML.
+function loadTranslator() {
+    if (!translator) {
+        translator = require('google-translate-api-x');
     }
 
-    if (
-        typeof language !== 'string' ||
-        !language.trim()
-    ) {
-        throw new TypeError(
-            'language debe ser un código de idioma válido.'
-        );
+    return translator;
+}
+
+async function translateText(text, language = 'en') {
+    if (typeof text !== 'string' || !text.trim()) {
+        throw new TypeError('text debe ser una cadena no vacía.');
     }
 
-    const result = await translate(text, {
-        to: language
-    });
+    if (typeof language !== 'string' || !language.trim()) {
+        throw new TypeError('language debe ser un código de idioma válido.');
+    }
+
+    const translate = loadTranslator();
+    const result = await translate(text, { to: language });
 
     return result.text;
 }
 
-/**
- * Traduce una moraleja manteniendo sus metadatos.
- */
-async function translateMoraleja(
-    moraleja,
-    language = 'en'
-) {
-    const item =
-        typeof moraleja === 'number'
-            ? getById(moraleja)
-            : moraleja;
+async function translateMoraleja(moraleja, language = 'en') {
+    const item = typeof moraleja === 'number' ? getById(moraleja) : moraleja;
 
-    if (
-        !item ||
-        typeof item.text !== 'string'
-    ) {
+    if (!item || typeof item.text !== 'string') {
         throw new TypeError(
             'translateMoraleja necesita una moraleja válida o su ID.'
         );
     }
 
-    const translatedText =
-        await translateText(
-            item.text,
-            language
-        );
+    const translatedText = await translateText(item.text, language);
 
     return {
         ...clone(item),
@@ -385,46 +354,19 @@ async function translateMoraleja(
     };
 }
 
-/**
- * Obtiene una moraleja aleatoria y la traduce.
- */
-async function randomTranslated(
-    language = 'en',
-    options = {}
-) {
+async function randomTranslated(language = 'en', options = {}) {
     const item = random(options);
 
-    return translateMoraleja(
-        item,
-        language
-    );
+    return translateMoraleja(item, language);
 }
 
-/**
- * Traduce una moraleja y la convierte en HTML.
- */
-async function translateHTML(
-    moraleja,
-    language = 'en',
-    options = {}
-) {
-    const translated =
-        await translateMoraleja(
-            moraleja,
-            language
-        );
+async function translateHTML(moraleja, language = 'en', options = {}) {
+    const translated = await translateMoraleja(moraleja, language);
 
-    return toHTML(
-        translated,
-        options
-    );
+    return toHTML(translated, options);
 }
 
-/**
- * API pública.
- */
 const api = {
-    // API moderna
     random,
     randomMany,
     get,
@@ -437,31 +379,24 @@ const api = {
     randomTranslated,
     translateHTML,
 
-    // Compatibilidad con la API original
-    TXT: () => random().text,
+    // Compatibilidad con la API original.
+    TXT: () => random()?.text,
 
-    HTML: (options = {}) =>
-        toHTML(
-            random(),
-            options
-        ),
+    HTML: (options = {}) => {
+        const item = random(options);
+
+        return item ? toHTML(item, options) : undefined;
+    },
 
     TranslateTXT: (language = 'en') =>
-        randomTranslated(language)
-            .then((item) => item.text),
+        randomTranslated(language).then((item) => item.text),
 
-    TranslateHTML: (
-        language = 'en',
-        options = {}
-    ) =>
-        randomTranslated(language)
-            .then((item) =>
-                toHTML(item, options)
-            )
+    TranslateHTML: (language = 'en', options = {}) =>
+        randomTranslated(language, options).then((item) =>
+            toHTML(item, options)
+        )
 };
 
 module.exports = api;
 
 module.exports.moralejas = moralejas;
-
-module.exports.default = api;

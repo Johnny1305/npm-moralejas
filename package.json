@@ -1,24 +1,59 @@
 {
-  "name": "moralejas",
-  "version": "2.0.1",
-  "description": "Moralejas y frases aleatorias para Node.js, con búsqueda, filtros, categorías, etiquetas, traducciones y generación de HTML.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node test/test.js"
-  },
-  "keywords": [
-    "moralejas",
-    "npm",
-    "nodejs",
-    "aleatorio",
-    "web",
-    "Javascript"
-  ],
-  "repository": "https://github.com/Johnny1305/npm-moralejas.git",
-  "author": "Johnny13",
-  "license": "MIT",
-  "dependencies": {
-    "@vitalets/google-translate-api": "^9.2.0",
-    "google-translate-api-x": "^10.7.2"
-  }
+    "name": "moralejas",
+    "version": "2.1.0",
+    "description": "Moralejas y frases aleatorias para Node.js, con búsqueda, filtros, categorías, etiquetas, traducciones y generación de HTML.",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./index.d.ts",
+            "require": "./index.js",
+            "default": "./index.js"
+        },
+        "./moralejas.json": "./src/moralejas.json",
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "index.js",
+        "index.d.ts",
+        "src/moralejas.json"
+    ],
+    "engines": {
+        "node": ">=18"
+    },
+    "scripts": {
+        "test": "node test/test.js",
+        "test:integration": "node test/test.js --integration",
+        "typecheck": "tsc --noEmit",
+        "format": "prettier --write \"*.{js,json}\" \"test/**/*.{js,ts}\" \".github/**/*.yml\"",
+        "format:check": "prettier --check \"*.{js,json}\" \"test/**/*.{js,ts}\" \".github/**/*.yml\""
+    },
+    "keywords": [
+        "moralejas",
+        "frases",
+        "nodejs",
+        "aleatorio",
+        "categorias",
+        "etiquetas",
+        "translate",
+        "html",
+        "espanol"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Johnny1305/npm-moralejas.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Johnny1305/npm-moralejas/issues"
+    },
+    "homepage": "https://github.com/Johnny1305/npm-moralejas#readme",
+    "author": "Johnny13",
+    "license": "MIT",
+    "dependencies": {
+        "google-translate-api-x": "^10.7.2"
+    },
+    "devDependencies": {
+        "prettier": "^3.10.1",
+        "typescript": "^5.9.3"
+    }
 }

@@ -61,7 +61,7 @@ pnpm add moralejas
 
 ## Requisitos
 
--   Node.js >= 14
+-   Node.js >= 18
 -   npm
 
 La funcionalidad de traducción requiere conexión a Internet.
@@ -131,6 +131,17 @@ const moraleja = moralejas.random({
   historySize: 10  
 });
 ```
+El historial se guarda por combinación de filtros (categoría, idioma y etiquetas). Si tu aplicación atiende a varios usuarios o procesos, pasa el historial explícitamente para no compartir estado:
+```javascript
+let ultimosIds = [];
+
+const moraleja = moralejas.random({  
+  category: 'humor',  
+  history: ultimosIds  
+});
+
+ultimosIds = [moraleja.id, ...ultimosIds].slice(0, 10);
+```
 
 ## Opciones disponibles
 
@@ -141,6 +152,7 @@ const moraleja = moralejas.random({
 | tags        | string[] | Filtra por etiquetas                           |
 | avoidRepeat | boolean  | Evita repetir moralejas recientes              |
 | historySize | number   | Número de moralejas recientes que se recuerdan |
+| history     | number[] | IDs a evitar; el llamador gestiona el historial |
 
   
 
@@ -232,6 +244,11 @@ moralejas.search('TECNOLOGIA');
 ```
 
 son equivalentes.
+
+También acepta varias palabras, en cualquier orden. Cada palabra debe aparecer en el texto, la categoría o las etiquetas:
+```javascript
+const resultados = moralejas.search('vida limones');
+```
 
 ## Limitar resultados
 ```javascript
@@ -802,7 +819,13 @@ Los tests comprueban:
 -   IDs únicos
 -   Estructura de las moralejas
 
-Las pruebas de traducción necesitan conexión a Internet.
+Las pruebas de traducción simulan el cliente de Google Translate, así que `npm test` funciona sin conexión.
+
+Para probar la traducción real (requiere Internet):
+
+```
+npm run test:integration
+```
 
   
 
@@ -836,7 +859,14 @@ El proyecto utiliza:
 google-translate-api-x
 ```
 
-Esta dependencia se utiliza exclusivamente para las funciones de traducción.
+Esta dependencia se utiliza exclusivamente para las funciones de traducción y solo se carga cuando se llama a una de ellas.
+
+También puedes escribir en TypeScript: el paquete incluye `index.d.ts`.
+```typescript
+import moralejas from 'moralejas';
+
+const moraleja = moralejas.random();
+```
 
   
 
